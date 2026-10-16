@@ -195,8 +195,9 @@ async function getTracks(ext) {
                 const epName = t(seg[0]) || name;
                 const rawUrl = seg.length > 1 ? seg.slice(1).join('$') : '';
                 const playUrl = lvdouDecrypt(rawUrl);
-                // 去掉 URL 中的百分号编码（对应 Python playerContent）
-                const cleanUrl = playUrl.replace(/%[0-9A-Fa-f]{2}/g, '');
+                // 解析接口已死，不再剥离百分号编码，直接返回原始 URL
+                // （剥离会删掉 %E6%AC%A2 这类中文文件名编码，导致 404）
+                const cleanUrl = playUrl;
                 tracks.push({ name: epName, pan: '', ext: { url: cleanUrl, line: name } });
             });
         });
@@ -211,8 +212,8 @@ async function getPlayinfo(ext) {
     let url = t(ext.url || '');
     if (!url) return jsonify({ urls: [], headers: [] });
     const plain = isPlainDirectUrl(url);
-    // 需要内置解析：非明文 URL，或本站 lyyytv.cn 伪直链
-    if (!plain || url.indexOf('lyyytv.cn') !== -1) {
+    if (!plain) {
+        // 只有非明文 URL（base64 密文等）才尝试解密+解析
         const parsed = await ldmaxParse(url);
         if (parsed && parsed.url) {
             return jsonify({
@@ -221,13 +222,8 @@ async function getPlayinfo(ext) {
             });
         }
     }
-    if (looksLikeMedia(url)) {
-        return jsonify({
-            urls: [url],
-            headers: [{ 'User-Agent': UA_OKHTTP, Referer: HOST + '/' }],
-        });
-    }
-    // 其他情况：返回原 URL 让 XPTV 尝试嗅探
+    // 明文 URL（含 lyyytv.cn 直链）直接播放
+    // 注意：ldmax 解析接口（61.184.23.217:6163）已死，不再对明文 URL 做二次解析
     return jsonify({
         urls: [url],
         headers: [{ 'User-Agent': UA_OKHTTP, Referer: HOST + '/' }],
