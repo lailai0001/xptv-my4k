@@ -1,4 +1,4 @@
-// 4K影院 - XPTV csp 格式
+// 影探 - XPTV csp 格式
 // 转换自 CatPawOpen 4K.py，站点 http://cms.lyyytv.cn（苹果CMS API）
 // 41 个分类，支持搜索/详情/播放，ldmax 加密链接解密 + 解析接口
 const cheerio = createCheerio();
@@ -10,7 +10,7 @@ const PARSE_API = 'http://61.184.23.217:6163/api/index?parsesId=4&appid=10001&vi
 
 const appConfig = {
     ver: 1,
-    title: '4K影院',
+    title: '影探',
     site: HOST,
     tabs: [
         { name: '最新电影', ext: { tid: '1' } },
