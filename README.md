@@ -2,12 +2,6 @@
 
 XPTV 可用源仓库，与 mira-cat（MiraPlayer 猫源）完全独立。
 
-## 订阅地址（XPTV 导入用，长期有效）
-
-```
-https://raw.githubusercontent.com/lailai0001/xptv-cat/refs/heads/main/xptv.json
-```
-
 ## 源列表
 
 | 源名 | 文件 | 说明 |
