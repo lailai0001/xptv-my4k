@@ -377,6 +377,12 @@
       "type": 3,
       "api": "csp_supjav",
       "ext": "https://raw.githubusercontent.com/lailai0001/xptv-my4k/refs/heads/main/js/supjav.js"
+    },
+    {
+      "name": "March视频",
+      "type": 3,
+      "api": "csp_march",
+      "ext": "https://raw.githubusercontent.com/lailai0001/xptv-my4k/refs/heads/main/js/march.js"
     }
   ]
 }
