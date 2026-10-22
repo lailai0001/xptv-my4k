@@ -305,6 +305,18 @@
       "type": 3,
       "api": "csp_huangguo",
       "ext": "https://raw.githubusercontent.com/lailai0001/xptv-my4k/refs/heads/main/js/huangguo.js"
+    },
+    {
+      "name": "聚合短剧",
+      "type": 3,
+      "api": "csp_juheduanju",
+      "ext": "https://raw.githubusercontent.com/lailai0001/xptv-my4k/refs/heads/main/js/juheduanju.js"
+    },
+    {
+      "name": "BestJavPorn",
+      "type": 3,
+      "api": "csp_bestjavporn",
+      "ext": "https://raw.githubusercontent.com/lailai0001/xptv-my4k/refs/heads/main/js/bestjavporn.js"
     }
   ]
 }
