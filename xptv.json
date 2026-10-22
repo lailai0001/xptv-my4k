@@ -281,6 +281,24 @@
       "type": 3,
       "api": "csp_xhongyan",
       "ext": "https://raw.githubusercontent.com/lailai0001/xptv-my4k/refs/heads/main/js/xhongyan.js"
+    },
+    {
+      "name": "肉视频",
+      "type": 3,
+      "api": "csp_rou",
+      "ext": "https://raw.githubusercontent.com/lailai0001/xptv-my4k/refs/heads/main/js/rou.js"
+    },
+    {
+      "name": "57吃瓜",
+      "type": 3,
+      "api": "csp_chigua57",
+      "ext": "https://raw.githubusercontent.com/lailai0001/xptv-my4k/refs/heads/main/js/chigua57.js"
+    },
+    {
+      "name": "StripChat",
+      "type": 3,
+      "api": "csp_stripchat",
+      "ext": "https://raw.githubusercontent.com/lailai0001/xptv-my4k/refs/heads/main/js/stripchat.js"
     }
   ]
 }
