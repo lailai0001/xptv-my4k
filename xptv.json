@@ -371,6 +371,12 @@
       "type": 3,
       "api": "csp_asmr",
       "ext": "https://raw.githubusercontent.com/lailai0001/xptv-my4k/refs/heads/main/js/asmr.js"
+    },
+    {
+      "name": "SupJav",
+      "type": 3,
+      "api": "csp_supjav",
+      "ext": "https://raw.githubusercontent.com/lailai0001/xptv-my4k/refs/heads/main/js/supjav.js"
     }
   ]
 }
